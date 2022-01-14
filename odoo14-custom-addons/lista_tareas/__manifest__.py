@@ -10,7 +10,7 @@
     """,
 
     'author': "Associate",
-    'website': "https://apuntesfpinformatica.es",
+    'website': "https://xataka.es",
     #Indicamos que es una aplicación
     'application': True,
 
