@@ -39,6 +39,8 @@
     <menuitem name="Usuarios" id="lista_tareas.menu_1" parent="lista_tareas.menu_root"/>
     <menuitem name="Grupos" id="lista_tareas.menu_2" parent="lista_tareas.menu_root"/>
     <menuitem name="Otros" id="lista_tareas.menu_3" parent="lista_tareas.menu_root"/>
+    <menuitem name="Eliminable" id="lista_tareas.menu_4" parent="lista_tareas.menu_root"/>
+    
   
     <!-- actions -->
 
@@ -52,6 +54,8 @@
     <menuitem name="Mostrar lista" id="lista_tareas.menu_3_list" parent="lista_tareas.menu_3"
               action="lista_tareas.action_window"/>
 
+    <menuitem name="Elimínate" id="lista_tareas.menu_4_list" parent="lista_tareas.menu_4"
+              action="lista_tareas.action_window"/>
 
 
   </data>
