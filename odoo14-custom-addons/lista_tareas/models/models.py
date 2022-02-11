@@ -13,6 +13,7 @@ class lista_tareas(models.Model):
     # https://www.odoo.com/documentation/14.0/developer/reference/addons/orm.html#fields
    
     tarea = fields.Char()
+    fecha = fields.Date()
     prioridad = fields.Integer()
     urgente = fields.Boolean(compute="_value_urgente", store=True)
     realizada = fields.Boolean()
