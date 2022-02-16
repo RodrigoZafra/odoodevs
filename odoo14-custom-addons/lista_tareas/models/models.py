@@ -12,8 +12,10 @@ class lista_tareas(models.Model):
     #Los tipos de datos a usar en el ORM son 
     # https://www.odoo.com/documentation/14.0/developer/reference/addons/orm.html#fields
    
+    avatar = fields.Image('Imagen tarea',max_width=50,max_heigth=50)
     tarea = fields.Char()
     fecha = fields.Date()
+    estado = fields.Integer()
     prioridad = fields.Integer()
     urgente = fields.Boolean(compute="_value_urgente", store=True)
     realizada = fields.Boolean()
