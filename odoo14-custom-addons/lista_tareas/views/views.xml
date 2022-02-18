@@ -19,6 +19,21 @@
       </field>
     </record>
 
+  <!--Esto es lo q hace q no funcione-->
+    <record model="ir.ui.view" id="lista_tareas.calender">
+        <field name="model">lista tareas calendar</field>
+        <field name="arch" type="xml">
+            <!-- Definimos las fechas (inicio y final)
+                asi como colo del proyecto para la vista calendario
+                PD: el unico dato obligatorio es "date_start"
+            -->
+            <calendar date_start="date_assign" date_stop="date_end" color="project_id">
+                <field name="name" />
+                <field name="user_id" />
+            </calendar>
+        </field>
+    </record>
+
 
     <!-- actions opening views on models -->
     <!-- Acciones al abrir las vistas en los modelos 
