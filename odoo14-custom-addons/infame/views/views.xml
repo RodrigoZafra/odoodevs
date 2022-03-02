@@ -1,0 +1,69 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="infame.list">
+      <field name="name">infame list</field>
+      <field name="model">infame.infame</field>
+      <field name="arch" type="xml">
+      <tree decoration-danger="score&lt;25">
+        <field name="title"/>
+        <field name="date"/>
+        <field name="score" widget="percentpie"/>
+        <field name="distributor"/>
+        <field name="publisher"/>
+        <field name="favs"/>
+      </tree>
+      </field>
+    </record>
+
+
+
+    <!-- actions opening views on models -->
+
+      <record model="ir.actions.act_window" id="infame.action_window">
+        <field name="name">infame window</field>
+        <field name="res_model">infame.infame</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="infame.action_server">
+    <field name="name">infame server</field>
+    <field name="model_id" ref="model_infame_infame"/>
+    <field name="state">code</field>
+    <field name="code">
+    action = {
+    "type": "ir.actions.act_window",
+    "view_mode": "tree,form",
+    "res_model": model._name,
+    }
+    </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+
+      <menuitem name="infame" id="infame.menu_root"/>
+
+    <!-- menu categories -->
+
+      <menuitem name="Website" id="infame.menu_1" parent="infame.menu_root"/>
+
+      <menuitem name="Forum" id="infame.menu_2" parent="infame.menu_root"/>
+
+    <!-- actions -->
+
+      <menuitem name="Web" id="infame.menu_11" parent="infame.menu_1"
+      action="infame.action_window"/>
+
+      <menuitem name="Films" id="infame.menu_12" parent="infame.menu_2"
+      action="infame.action_window"/>
+
+      <menuitem name="Games" id="infame.menu_13" parent="infame.menu_2"
+      action="infame.action_window"/>
+
+  </data>
+</odoo>
